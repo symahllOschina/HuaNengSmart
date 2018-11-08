@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/gd_toolbar_layout"/>
+
+    <EditText
+        android:id="@+id/oldPwdTv"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:drawableLeft="@drawable/ic_passwd"
+        android:drawablePadding="10dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:background="@color/white"
+        android:inputType="textPassword"
+        android:maxLength="20"
+        android:hint="输入原密码"
+        android:padding="5dp"
+        android:textSize="@dimen/mediumTextSize"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:layout_height="1px"
+        android:background="@color/gray_999"/>
+
+    <EditText
+        android:id="@+id/newPwd1Tv"
+        android:drawableLeft="@drawable/ic_passwd"
+        android:drawablePadding="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:background="@color/white"
+        android:inputType="textPassword"
+        android:hint="输入新密码"
+        android:maxLength="20"
+        android:padding="5dp"
+        android:textSize="@dimen/mediumTextSize"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:layout_height="1px"
+        android:background="@color/gray_999"/>
+
+    <EditText
+        android:id="@+id/newPwd2Tv"
+        android:drawableLeft="@drawable/ic_passwd"
+        android:drawablePadding="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:background="@color/white"
+        android:inputType="textPassword"
+        android:maxLength="20"
+        android:hint="确认新密码"
+        android:padding="5dp"
+        android:textSize="@dimen/mediumTextSize"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:layout_height="1px"
+        android:background="@color/gray_999"/>
+    <Button
+        android:id="@+id/submitBtn"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="40dp"
+        android:onClick="login"
+        android:background="@drawable/btn_color_primary"
+        android:text="提交"
+        android:textColor="@color/white"
+        android:textSize="@dimen/largeTextSize"/>
+
+</LinearLayout>

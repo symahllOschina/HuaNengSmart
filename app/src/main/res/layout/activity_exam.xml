@@ -1,0 +1,88 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/gd_toolbar_layout"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="10dp">
+
+        <TextView
+            android:id="@+id/nameTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="姓名："
+            android:textColor="@color/gray_555"
+            android:textSize="@dimen/mediumTextSize"/>
+
+        <Chronometer
+            android:id="@+id/chronometer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:format="MM:SS"
+            android:layout_alignParentRight="true" />
+
+        <TextView
+            android:id="@+id/timeTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="已用时："
+            android:layout_toLeftOf="@id/chronometer"
+            android:textColor="@color/gray_555"
+            android:textSize="@dimen/mediumTextSize"/>
+    </RelativeLayout>
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/viewPager"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@android:color/white"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/lastBtn"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="45dp"
+            android:text="上一题"
+            android:gravity="center"
+            android:background="@drawable/selector_btn_last"
+            android:textColor="@color/gray_555"
+            android:textSize="@dimen/mediumTextSize"/>
+
+        <Button
+            android:id="@+id/submitBtn"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="45dp"
+            android:text="交卷"
+            android:visibility="gone"
+            android:gravity="center"
+            android:background="@drawable/selector_btn_next"
+            android:textColor="@color/gray_555"
+            android:textSize="@dimen/mediumTextSize"/>
+
+        <Button
+            android:id="@+id/nextBtn"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="45dp"
+            android:text="下一题"
+            android:background="@drawable/selector_btn_next"
+            android:gravity="center"
+            android:textColor="@color/gray_555"
+            android:textSize="@dimen/mediumTextSize"/>
+    </LinearLayout>
+
+</LinearLayout>

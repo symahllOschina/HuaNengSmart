@@ -1,0 +1,314 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/activity_bg"
+    android:orientation="vertical">
+
+    <include layout="@layout/gd_toolbar_layout"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="200dp">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/contact_back"/>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom"
+                    android:padding="20dp">
+
+                    <ImageView
+                        android:id="@+id/headImg"
+                        android:layout_width="70dp"
+                        android:layout_height="70dp"
+                        android:paddingRight="20dp"
+                        android:src="@drawable/ic_head_orange"/>
+
+                    <TextView
+                        android:id="@+id/nameTv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_toRightOf="@id/headImg"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/extraTextSize"
+                        tools:text="李喜松"/>
+                </RelativeLayout>
+            </FrameLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="-1dp"
+                android:background="@drawable/selector_bg"
+                android:onClick="call"
+                android:padding="10dp">
+
+                <TextView
+                    android:id="@+id/mobileTv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/primaryTextColor"
+                    android:textSize="@dimen/mediumTextSize"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/mobileTv"
+                    android:text="手机号"
+                    android:textColor="@color/gray_999"
+                    android:textSize="@dimen/mediumTextSize"/>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="-1dp"
+                android:background="@drawable/selector_bg"
+                android:padding="10dp">
+
+                <TextView
+                    android:id="@+id/companyTv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/primaryTextColor"
+                    android:textSize="@dimen/mediumTextSize"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/companyTv"
+                    android:text="单位"
+                    android:textColor="@color/gray_999"
+                    android:textSize="@dimen/mediumTextSize"/>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="-1dp"
+                android:background="@drawable/selector_bg"
+                android:padding="10dp">
+
+                <TextView
+                    android:id="@+id/departmentTv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/primaryTextColor"
+                    android:textSize="@dimen/mediumTextSize"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/departmentTv"
+                    android:text="所属部门"
+                    android:textColor="@color/gray_999"
+                    android:textSize="@dimen/mediumTextSize"/>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="-1dp"
+                android:background="@drawable/selector_bg"
+                android:padding="10dp">
+
+                <TextView
+                    android:id="@+id/jobTv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/primaryTextColor"
+                    android:textSize="@dimen/mediumTextSize"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/jobTv"
+                    android:text="职务"
+                    android:textColor="@color/gray_999"
+                    android:textSize="@dimen/mediumTextSize"/>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="-1dp"
+                android:background="@drawable/selector_bg"
+                android:padding="10dp">
+
+                <TextView
+                    android:id="@+id/graduateTv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/primaryTextColor"
+                    android:textSize="@dimen/mediumTextSize"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/graduateTv"
+                    android:text="毕业院校"
+                    android:textColor="@color/gray_999"
+                    android:textSize="@dimen/mediumTextSize"/>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="-1dp"
+                android:background="@drawable/selector_bg"
+                android:padding="10dp">
+
+                <TextView
+                    android:id="@+id/majorTv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/primaryTextColor"
+                    android:textSize="@dimen/mediumTextSize"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/majorTv"
+                    android:text="专业"
+                    android:textColor="@color/gray_999"
+                    android:textSize="@dimen/mediumTextSize"/>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="-1dp"
+                android:background="@drawable/selector_bg"
+                android:padding="10dp">
+
+                <TextView
+                    android:id="@+id/typeworkTv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/primaryTextColor"
+                    android:textSize="@dimen/mediumTextSize"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/typeworkTv"
+                    android:text="工种"
+                    android:textColor="@color/gray_999"
+                    android:textSize="@dimen/mediumTextSize"/>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="-1dp"
+                android:background="@drawable/selector_bg"
+                android:padding="10dp">
+
+                <TextView
+                    android:id="@+id/certificateNoTv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/primaryTextColor"
+                    android:textSize="@dimen/mediumTextSize"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/certificateNoTv"
+                    android:text="特种证书编号"
+                    android:textColor="@color/gray_999"
+                    android:textSize="@dimen/mediumTextSize"/>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="-1dp"
+                android:background="@drawable/selector_bg"
+                android:padding="10dp">
+
+                <TextView
+                    android:id="@+id/bloodTypeTv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/primaryTextColor"
+                    android:textSize="@dimen/mediumTextSize"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/bloodTypeTv"
+                    android:text="血型"
+                    android:textColor="@color/gray_999"
+                    android:textSize="@dimen/mediumTextSize"/>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="-1dp"
+                android:background="@drawable/selector_bg"
+                android:padding="10dp">
+
+
+                <TextView
+                    android:id="@+id/emailTv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/primaryTextColor"
+                    android:textSize="@dimen/mediumTextSize"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/emailTv"
+                    android:text="邮箱地址"
+                    android:textColor="@color/gray_999"
+                    android:textSize="@dimen/mediumTextSize"/>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="-1dp"
+                android:background="@drawable/selector_bg"
+                android:padding="10dp">
+
+                <TextView
+                    android:id="@+id/wechatTv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/primaryTextColor"
+                    android:textSize="@dimen/mediumTextSize"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/wechatTv"
+                    android:layout_centerVertical="true"
+                    android:text="微信"
+                    android:textColor="@color/gray_999"
+                    android:textSize="@dimen/mediumTextSize"/>
+            </RelativeLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

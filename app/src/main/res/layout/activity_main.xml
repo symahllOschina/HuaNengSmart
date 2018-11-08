@@ -1,0 +1,55 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical" >
+
+    <FrameLayout
+        android:id="@+id/content_frame"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"/>
+
+    <RadioGroup
+        android:id="@+id/navRadioGroup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/tab_bg"
+        android:layout_gravity="bottom"
+        android:gravity="bottom"
+        android:orientation="horizontal"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp" >
+
+        <RadioButton
+            style="@style/nav_tab_radio"
+            android:id="@+id/main_tab1"
+            android:checked="true"
+            android:text="@string/main_tab1"
+            android:drawableTop="@drawable/selector_nav1" />
+
+        <RadioButton
+            style="@style/nav_tab_radio"
+            android:id="@+id/main_tab2"
+            android:text="@string/main_tab2"
+            android:drawableTop="@drawable/selector_nav2" />
+
+        <RadioButton
+            style="@style/nav_tab_radio"
+            android:id="@+id/main_tab3"
+            android:text="@string/main_tab3"
+            android:drawableTop="@drawable/selector_nav3" />
+
+        <RadioButton
+            style="@style/nav_tab_radio"
+            android:id="@+id/main_tab4"
+            android:text="@string/main_tab4"
+            android:drawableTop="@drawable/selector_nav4" />
+
+        <RadioButton
+            style="@style/nav_tab_radio"
+            android:id="@+id/main_tab5"
+            android:text="@string/main_tab5"
+            android:drawableTop="@drawable/selector_nav5" />
+    </RadioGroup>
+
+</LinearLayout>

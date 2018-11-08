@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/orange"
+    android:padding="10dp">
+
+    <TextView
+        android:id="@+id/titleTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/iconIv"
+        android:layout_centerVertical="true"
+        android:maxLines="1"
+        android:textColor="@color/white"
+        android:textSize="@dimen/mediumTextSize"/>
+
+    <Button
+        android:id="@+id/joinBtn"
+        android:text="进入会议室"
+        android:layout_alignParentRight="true"
+        android:textColor="@color/white"
+        android:background="@color/colorPrimary"
+        android:layout_width="wrap_content"
+        android:layout_height="35dp"/>
+</RelativeLayout>

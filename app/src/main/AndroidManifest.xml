@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+          tools:overrideLibrary="com.inpor.fastmeetingcloud"
+          xmlns:tools="http://schemas.android.com/tools"
+    package="com.huaneng.zhgd">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <!-- 外置存储存取权限 -->
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <!-- 视频会议 -->
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+    <uses-permission android:name="android.permission.CAPTURE_AUDIO_OUTPUT" />
+    <uses-permission android:name="android.permission.READ_LOGS" />
+
+    <!-- 极光推送 -->
+    <uses-permission android:name="com.huaneng.zhgd.permission.JPUSH_MESSAGE" />
+    <uses-permission android:name="android.permission.RECEIVE_USER_PRESENT" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+
+    <application
+        android:name=".App"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        tools:replace="android:icon,android:theme,android:name,android:label"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name=".MainActivity"
+            android:launchMode="singleTask"></activity>
+        <activity android:name=".modules.ModuleListActivity" />
+        <activity android:name=".menu.MenusActivity" />
+        <activity android:name=".WebViewActivity"></activity>
+        <activity
+            android:name=".LoginActivity"
+            android:label="@string/title_activity_login"></activity>
+        <activity
+            android:name=".SplashActivity"
+            android:theme="@style/NoTitleFullscreen">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".personal.PersonalInfoActivity"
+            android:label="@string/title_activity_personal" />
+        <activity android:name=".modules.ArticleListActivity" />
+        <activity android:name=".modules.ListActivity_17" />
+        <activity android:name=".modules.ListTabActivity" />
+        <activity android:name=".modules.ListTab3Activity" />
+        <activity android:name=".modules.AttendanceListActivity" />
+        <activity android:name=".modules.ListMenuActivity" />
+        <activity android:name=".modules.ListTabMenuActivity" />
+        <activity android:name=".modules.ListTabMultiMenuActivity" />
+        <activity android:name=".modules.ListFilterCompanyActivity" />
+        <activity android:name=".modules.SafeManageDisplayActivity" />
+        <activity android:name=".modules.SuperviseExposureActivity" />
+        <activity android:name=".modules.ArticleSubmitActivity" />
+        <activity
+            android:name=".video.monitor.VideoMonitorActivity"
+            android:label="@string/title_activity_video_monitor" />
+        <activity
+            android:name=".video.monitor.SingleMonitorActivity"
+            android:screenOrientation="landscape"
+            android:theme="@style/NoTitleFullscreen"></activity>
+        <activity
+            android:name=".video.meeting.VideoMeetingActivity"
+            android:label="@string/title_activity_video_meeting"></activity>
+        <activity
+            android:name=".site.ContactListActivity"
+            android:label="@string/title_activity_contact_list"></activity>
+        <activity
+            android:name=".warehouse.WarehouseActivity"
+            android:label="@string/title_activity_warehouse"></activity>
+        <activity
+            android:name=".site.ContactActivity"
+            android:label="@string/title_activity_contact"></activity>
+        <activity
+            android:name=".exam.ExamCenterActivity"
+            android:label="@string/title_activity_exam_center"/>
+        <activity
+            android:name=".exam.ExamActivity"/>
+        <activity
+            android:name=".exam.ExamResultActivity"/>
+        <activity
+            android:name=".study.MobileClassroomActivity"/>
+        <activity
+            android:name=".study.FileDisplayActivity"/>
+        <activity
+            android:name=".study.VideoPlayVerticalActivity"/>
+        <activity
+            android:name=".study.VideoPlayActivity"
+            android:theme="@style/NoTitleFullscreen"
+            android:screenOrientation="landscape"/>
+        <activity
+            android:name=".notice.NoticeActivity"/>
+        <activity
+            android:name=".site.ImportDeviceActivity"/>
+        <activity
+            android:name=".modules.ScheduleListActivity"/>
+        <activity
+            android:name=".site.ImportDeviceInfoActivity"/>
+        <activity android:name=".PDFViewActivity"></activity>
+        <activity android:name=".TxtViewActivity"></activity>
+        <activity android:name=".OfficeActivity"></activity>
+        <activity android:name=".MeetingLoginActivity"></activity>
+        <activity android:name=".device.EntryDataListActivity"></activity>
+
+        <!-- 极光推送 -->
+        <receiver
+            android:name=".utils.JPushReceiver"
+            android:enabled="true">
+            <intent-filter>
+                <action android:name="cn.jpush.android.intent.REGISTRATION" />
+                <action android:name="cn.jpush.android.intent.MESSAGE_RECEIVED" />
+                <action android:name="cn.jpush.android.intent.NOTIFICATION_RECEIVED" />
+                <action android:name="cn.jpush.android.intent.NOTIFICATION_OPENED" />
+                <action android:name="cn.jpush.android.intent.NOTIFICATION_CLICK_ACTION" />
+                <action android:name="cn.jpush.android.intent.CONNECTION" />
+
+                <category android:name="com.huaneng.zhgd" />
+            </intent-filter>
+        </receiver>
+
+        <!-- 百度定位 -->
+        <service
+            android:name="com.baidu.location.f"
+            android:enabled="true"
+            android:process=":remote"></service>
+
+        <meta-data
+            android:name="com.baidu.lbsapi.API_KEY"
+            android:value="KIHyrGMCkQoxvb0NpVud6jihD6Ubd11c"></meta-data>
+
+        <activity android:name=".settings.UpdatePwdActivity"
+            android:label="@string/title_activity_update_pwd"></activity>
+
+        <!--照片选择和预览-->
+        <activity android:name="me.iwf.photopicker.PhotoPickerActivity"
+                  android:theme="@style/Theme.AppCompat.NoActionBar" />
+
+        <activity android:name="me.iwf.photopicker.PhotoPagerActivity"
+                  android:theme="@style/Theme.AppCompat.NoActionBar"/>
+
+        <provider
+            android:name="android.support.v4.content.FileProvider"
+            android:authorities="com.huaneng.zhgd.provider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths"/>
+        </provider>
+    </application>
+
+</manifest>

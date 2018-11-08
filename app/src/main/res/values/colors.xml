@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#007AFF</color>
+    <color name="colorPrimaryDark">#007AFF</color>
+    <color name="colorAccent">#4166F5</color>
+
+    <color name="transparent">#00000000</color>
+
+    <color name="gray_999">#999999</color>
+    <color name="white">#FFFFFF</color>
+    <color name="black">#000000</color>
+    <color name="red">#FF0000</color>
+    <color name="eee">#EEEEEE</color>
+    <color name="ddd">#DDDDDD</color>
+    <color name="gray_555">#555555</color>
+
+    <color name="activity_bg">#EFEFF4</color>
+    <color name="light_gray">#1a000000</color>
+    <color name="lightest_gray">#0a000000</color>
+    <color name="primaryTextColor">#414141</color>
+
+    <color name="meeting">#414743</color>
+    <color name="all_bg_color">#f7f7f7</color>
+    <color name="ThemeColor">#33B0E2</color>
+    <color name="hintWhite">#50FFFFFF</color>
+    <color name="division_line_color">#eeeeee</color>
+    <color name="orange">#F4A460</color>
+    <color name="weather_text_color">#3C5F81</color>
+
+    <color name="blue1">#9fdbf4</color>
+    <color name="blue2">#92d7f4</color>
+
+</resources>

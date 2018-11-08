@@ -1,0 +1,52 @@
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="10dp">
+
+    <TextView
+        android:id="@+id/date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:textColor="@color/weather_text_color"
+        android:textSize="@dimen/largeTextSize"
+        tools:text="12/5"/>
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+
+        <ImageView
+            android:id="@+id/cond_img"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            tools:src="@drawable/sunny"/>
+
+        <TextView
+            android:id="@+id/cond_txt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:textColor="@color/weather_text_color"
+            android:textSize="@dimen/largeTextSize"
+            tools:text="晴"/>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tmp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:textColor="@color/weather_text_color"
+        android:textSize="@dimen/largeTextSize"
+        tools:text="7° ~ 0°"/>
+
+</RelativeLayout>

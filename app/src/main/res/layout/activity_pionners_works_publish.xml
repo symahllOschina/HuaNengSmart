@@ -1,0 +1,51 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/activity_bg"
+    android:gravity="center_horizontal"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/gd_toolbar_layout"/>
+
+    <EditText
+        android:id="@+id/titleEt"
+        android:background="@drawable/shape_white_round_border"
+        android:maxLines="1"
+        android:padding="10dp"
+        android:maxLength="30"
+        android:hint="请输入标题"
+        android:textColor="@color/primaryTextColor"
+        android:textSize="@dimen/mediumTextSize"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <EditText
+        android:id="@+id/descriptionEt"
+        android:background="@drawable/shape_white_round_border"
+        android:minLines="10"
+        android:padding="10dp"
+        android:maxLength="1000"
+        android:hint="请详细描述你发现的安全问题"
+        android:gravity="top"
+        android:textColor="@color/primaryTextColor"
+        android:textSize="@dimen/mediumTextSize"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <com.huaneng.zhgd.utils.NineGridlayout
+        android:layout_marginTop="10dp"
+        android:id="@+id/nineGridlayout"
+        android:layout_marginLeft="40dp"
+        android:layout_marginRight="40dp"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content" />
+
+</LinearLayout>

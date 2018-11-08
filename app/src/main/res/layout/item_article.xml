@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/item_menu_bg"
+    android:padding="10dp">
+
+    <ImageView
+        android:id="@+id/iconIv"
+        android:layout_width="60dp"
+        android:layout_height="50dp"
+        android:layout_marginRight="10dp"/>
+
+    <TextView
+        android:id="@+id/titleTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/iconIv"
+        android:maxLines="1"
+        android:textColor="@color/primaryTextColor"
+        android:textSize="@dimen/mediumTextSize"/>
+
+    <LinearLayout
+        android:layout_toRightOf="@id/iconIv"
+        android:layout_below="@id/titleTv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:gravity="bottom"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/subTitleTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:maxLines="2"
+            android:ellipsize="end"
+            android:textColor="@color/gray_999"
+            android:textSize="@dimen/smallTextSize"/>
+
+        <TextView
+            android:id="@+id/timeTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/gray_999"
+            android:textSize="@dimen/smallTextSize"/>
+    </LinearLayout>
+
+</RelativeLayout>

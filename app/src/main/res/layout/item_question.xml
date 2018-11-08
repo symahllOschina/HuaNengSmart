@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/item_menu_bg"
+    android:padding="10dp"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/titleTv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5dp"
+        android:textColor="@color/primaryTextColor"
+        android:textSize="@dimen/mediumTextSize"
+        tools:text="标题" />
+
+    <RelativeLayout
+        android:layout_below="@id/titleTv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+        <TextView
+            android:id="@+id/noJoinTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/gray_999"
+            android:visibility="gone"
+            android:textSize="@dimen/smallTextSize"
+            android:text="未参加" />
+        <TextView
+            android:id="@+id/maxScoreTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:textColor="@color/gray_999"
+            android:textSize="@dimen/smallTextSize" />
+        <TextView
+            android:id="@+id/lastScoreTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/gray_999"
+            android:layout_centerInParent="true"
+            android:visibility="gone"
+            android:textSize="@dimen/smallTextSize" />
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/answerBtn"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="10dp"
+        android:text="马上答题"
+        android:background="@drawable/shape_white_round_border"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp" />
+
+</RelativeLayout>

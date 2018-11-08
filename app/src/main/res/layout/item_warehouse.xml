@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:paddingLeft="20dp"
+    android:background="@color/white">
+
+    <TextView
+        android:id="@+id/nameTv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:maxLines="1"
+        android:padding="10dp"
+        android:drawableRight="@drawable/ic_arrow_down"
+        android:textColor="@color/primaryTextColor"
+        android:textSize="@dimen/mediumTextSize"/>
+
+    <com.huaneng.zhgd.utils.MyListView
+        android:paddingLeft="20dp"
+        android:id="@+id/listView"
+        android:visibility="gone"
+        android:divider="@null"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+</LinearLayout>

@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/item_menu_bg"
+    android:padding="10dp">
+
+    <ImageView
+        android:id="@+id/iconIv"
+        android:layout_width="80dp"
+        android:layout_height="60dp"
+        android:scaleType="centerCrop"
+        android:layout_marginRight="10dp"/>
+
+    <TextView
+        tools:text="标题"
+        android:id="@+id/titleTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/iconIv"
+        android:maxLines="1"
+        android:textColor="@color/primaryTextColor"
+        android:textSize="@dimen/largeTextSize"/>
+
+    <LinearLayout
+        android:layout_toRightOf="@id/iconIv"
+        android:layout_below="@id/titleTv"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="bottom"
+        android:orientation="vertical">
+
+        <TextView
+            tools:text="副标题"
+            android:id="@+id/subTitleTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:maxLines="2"
+            android:ellipsize="end"
+            android:textColor="@color/gray_999"
+            android:textSize="@dimen/mediumTextSize"/>
+
+        <TextView
+            tools:text="2018-5-14"
+            android:id="@+id/timeTv"
+            android:visibility="gone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/gray_999"
+            android:textSize="@dimen/mediumTextSize"/>
+    </LinearLayout>
+
+</RelativeLayout>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/action_giveup"
+        android:icon="@null"
+        android:title="放弃考试"
+        app:showAsAction="always"/>
+
+</menu>

@@ -1,0 +1,134 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:orientation="vertical">
+
+    <include layout="@layout/gd_toolbar_layout"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="10dp">
+
+        <TextView
+            android:id="@+id/nameTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="姓名："
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="15dp"
+            android:textColor="@color/gray_555"
+            android:textSize="@dimen/mediumTextSize"/>
+
+        <TextView
+            android:id="@+id/timeTv"
+            android:layout_marginBottom="15dp"
+            android:layout_below="@id/nameTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="共用时："
+            android:textColor="@color/gray_555"
+            android:textSize="@dimen/mediumTextSize"/>
+
+        <TextView
+            android:id="@+id/scoreTv"
+            android:layout_marginBottom="15dp"
+            android:layout_below="@id/timeTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="得分："
+            android:textColor="@color/gray_555"
+            android:textSize="@dimen/mediumTextSize"/>
+        <TextView
+            android:id="@+id/resultTv"
+            android:layout_marginBottom="5dp"
+            android:layout_below="@id/scoreTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="答对"
+            android:textColor="@color/gray_555"
+            android:textSize="@dimen/mediumTextSize"/>
+
+        <com.github.mikephil.charting.charts.PieChart
+            android:id="@+id/pieChart"
+            android:layout_marginLeft="30dp"
+            android:layout_toRightOf="@id/resultTv"
+            android:layout_centerVertical="true"
+            android:layout_width="150dp"
+            android:layout_height="150dp"/>
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/wrongAnswerListLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:text="错题列表如下："
+        android:visibility="gone"
+        android:textColor="@color/gray_555"
+        android:textSize="@dimen/mediumTextSize"/>
+
+    <FrameLayout
+        android:id="@+id/wrongAnswerBox"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/viewPager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+        <ImageView
+            android:id="@+id/lastBtn"
+            android:layout_gravity="center_vertical"
+            android:src="@drawable/arrow_left"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <ImageView
+            android:id="@+id/nextBtn"
+            android:layout_gravity="center_vertical|right"
+            android:src="@drawable/arrow_right"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </FrameLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:padding="10dp">
+
+        <Button
+            android:id="@+id/againBtn"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="35dp"
+            android:text="再考一次"
+            android:onClick="again"
+            android:gravity="center"
+            android:layout_marginRight="50dp"
+            android:background="@drawable/shape_white_round_border"
+            android:textColor="@color/gray_555"
+            android:textSize="@dimen/mediumTextSize"/>
+
+        <Button
+            android:id="@+id/cancelBtn"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="35dp"
+            android:text="返回"
+            android:onClick="cancel"
+            android:gravity="center"
+            android:background="@drawable/shape_white_round_border"
+            android:textColor="@color/gray_555"
+            android:textSize="@dimen/mediumTextSize"/>
+
+    </LinearLayout>
+
+</LinearLayout>
